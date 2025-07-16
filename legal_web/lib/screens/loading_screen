@@ -1,23 +1,7 @@
 import 'package:flutter/material.dart';
 
-class LoadingScreen extends StatefulWidget {
+class LoadingScreen extends StatelessWidget {
   const LoadingScreen({super.key});
-
-  @override
-  State<LoadingScreen> createState() => _LoadingScreenState();
-}
-
-class _LoadingScreenState extends State<LoadingScreen> {
-  @override
-  void initState() {
-    super.initState();
-    // Navigate to sign-in after 3 seconds
-    Future.delayed(const Duration(seconds: 3), () {
-      if (mounted) {
-        Navigator.pushReplacementNamed(context, '/signin');
-      }
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
